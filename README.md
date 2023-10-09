@@ -25,7 +25,7 @@ Easy usable docker image for [Nextcloud](http://nextcloud.com), the community fo
 ### Included software
 
 * Alpine Linux
-* PHP 7
+* PHP 8
 * APCu
 * NGinx
 * cron
@@ -35,7 +35,7 @@ Everything is bundled in the newest stable version.
 
 ### Tags
 
-* **latest**: Latest stable Nextcloud version (PHP 7)
+* **latest**: Latest stable Nextcloud version (PHP 8)
 * **X.X.X**: Stable version tags of Nextcloud (e.g. v9.0.52) (Version >= 12.0.0 use PHP 7)
 * **develop**: Latest development branch (may unstable)
 * **TAG-ARCHITECTURE** (Example: develop-arm64): Tag with fixed processor architecture
@@ -213,11 +213,3 @@ $ docker run -p 80:80 rootlogin/nextcloud
 ## Contribution
 
 This stuff is released under GPL. I'm happy about every pull-request, that makes this tool better.
-
-## Donate
-
-If you want to donate for this project you can do it through [Github Sponsorship](https://github.com/sponsors/chrootlogin/).
-
-Or you can send me some crypto-coins to the following address:
-
-**Bitcoin**: bc1qvemyhud469qe4v6lcsn8sxu5e57m4sw3u2ujff
