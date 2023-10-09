@@ -1,18 +1,18 @@
 ARG BUILD_DATE
 ARG VCS_REF
 
-FROM php:7.4-fpm-alpine
+FROM php:8.2-fpm-alpine
 
 LABEL maintainer="Simon Erhardt <hello@rootlogin.ch>" \
   org.label-schema.name="Nextcloud" \
   org.label-schema.description="Minimal Nextcloud docker image based on Alpine Linux." \
   org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/chrootLogin/docker-nextcloud" \
+  org.label-schema.vcs-url="https://github.com/Bellum45/docker-nextcloud" \
   org.label-schema.schema-version="1.0"
 
 ARG NEXTCLOUD_GPG="2880 6A87 8AE4 23A2 8372  792E D758 99B9 A724 937A"
-ARG NEXTCLOUD_VERSION=21.0.1
+ARG NEXTCLOUD_VERSION=27.1.2
 ARG UID=1501
 ARG GID=1501
 
@@ -88,11 +88,11 @@ RUN set -ex \
     pgsql \ 
     zip \
   && pecl channel-update pecl.php.net \
-  && pecl install APCu-5.1.19 \
-  && pecl install imagick-3.4.4 \
-  && pecl install mcrypt-1.0.4 \
-  && pecl install memcached-3.1.5 \
-  && pecl install redis-5.3.2 \
+  && pecl install APCu-5.1.22 \
+  && pecl install imagick-3.7.0 \
+  && pecl install mcrypt-1.0.6 \
+  && pecl install memcached-3.2.0 \
+  && pecl install redis-6.0.1 \
   && docker-php-ext-enable apcu imagick mcrypt memcached redis \
 # Remove dev packages
   && apk del \
